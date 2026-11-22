@@ -33,10 +33,23 @@ jobs:
           chmod 600 ~/.ssh/id_ed25519
           printf '%s\n' "$KNOWN_HOSTS" > ~/.ssh/known_hosts
 
-      - name: Per tar über SSH deployen
+      - name: Deployen (tar über SSH, mit Bereinigung)
         env:
           HOST: ${{ secrets.DEPLOY_HOST }}
           USER: ${{ secrets.DEPLOY_USER }}
           TARGET: ${{ secrets.DEPLOY_PATH }}
         run: |
-          tar -czf - -C dist . | ssh "$USER@$HOST" "mkdir -p '$TARGET' && tar -xzf - -C '$TARGET'"
+          # Sicherheitschecks
+          test -n "$TARGET"
+          test -f dist/index.html
+
+          # 1. Neuen Build in Staging hochladen (Live-Seite bleibt unberührt)
+          tar -czf - -C dist . | ssh "$USER@$HOST" \
+            "rm -rf '$TARGET.staging' && mkdir -p '$TARGET.staging' && tar -xzf - -C '$TARGET.staging'"
+
+          # 2. Altes Webroot leeren, Staging einspielen, Staging löschen
+          ssh "$USER@$HOST" "set -e
+            mkdir -p '$TARGET'
+            find '$TARGET' -mindepth 1 -maxdepth 1 ! -name .well-known ! -name cgi-bin -exec rm -rf {} +
+            cp -a '$TARGET.staging/.' '$TARGET/'
+            rm -rf '$TARGET.staging'"
