@@ -161,7 +161,7 @@ Ja genau ein Garant für Langlebigkeit Qualität un Präzesion..
 
 [MX Keys Tastatur](https://www.logitech.com/de-de/products/keyboards/mx-keys-wireless-keyboard.html)
 
-![](images/IMG_20220716_143821700_HDR.jpg)
+![](images/IMG_20220716_143821700_HDR-scaled.jpg)
 
 Das 2. Austausch Gerät..
 
