@@ -59,6 +59,14 @@ const { title, description, pubDate, updatedDate, heroImage, categories, tags, n
 			)}
 		</article>
 
+        <script>
+            import mediumZoom from 'medium-zoom';
+            mediumZoom('article img:not(.active-image)', {
+                background: 'rgba(0, 0, 0, 0.85)',
+                margin: 24,
+            });
+        </script>
+
 		<footer class="post-footer">
 			<div class="footer-nav-left">
 				<a href="/">&larr; home (cd ~)</a>
