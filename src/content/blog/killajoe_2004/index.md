@@ -3,7 +3,10 @@ title: "#killajoe_2004"
 date: 2025-02-01
 categories: 
   - "allgemein"
+heroImage: "./images/killajoe_2004-pdf.jpg"
 ---
+
+
 
 **Schriftstück 1** 2004 Eine Geschichte und zu guter letzt, ohne Ende, mit einem kurzen Abgleiten in das Nachdenken:
 
