@@ -1,63 +1,97 @@
-# Astro Starter Kit: Blog
+# joekamprad's Blog
 
-```sh
-npm create astro@latest -- --template blog
-```
+Personal blog of **joekamprad** (Der Doktor). I write about whatever is on my mind: technology, cooking, politics, and thoughts on existence.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+🌐 **Live:** https://kamprad.net
 
-Features:
+## 📚 Topics
 
-- ✅ Minimal styling (make it your own!)
+- 💻 **Technology**: Linux, open source, software and tinkering
+- 🍳 **Cooking**: recipes, experiments and kitchen notes
+- 🏛️ **Politics**: opinions and commentary
+- 🌌 **Life & existence**: reflections and random thoughts
+
+## 👋 About
+
+I'm a developer and lead maintainer of the ISO and desktop setups for [EndeavourOS](https://endeavouros.com/). This blog, however, is not limited to that. Here you can dive into what is rattling inside my brain aside that..
+
+## ✨ Features
+
+- ✅ Minimal styling based on the Astro blog template
 - ✅ 100/100 Lighthouse performance
 - ✅ SEO-friendly with canonical URLs and Open Graph data
 - ✅ Sitemap support
-- ✅ RSS Feed support
+- ✅ RSS feed support
 - ✅ Markdown & MDX support
 
 ## 🚀 Project Structure
 
-Inside of your Astro project, you'll see the following folders and files:
-
 ```text
-├── public/
+├── public/            # Static files (images, favicon, fonts)
 ├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
-│   └── pages/
+│   ├── assets/        # Imported images and graphics
+│   ├── components/    # Astro components
+│   ├── content/
+│   │   └── blog/      # Blog posts (.md / .mdx)
+│   ├── layouts/       # Page layouts
+│   └── pages/         # Routes, derived from file names
 ├── astro.config.mjs
-├── README.md
 ├── package.json
 └── tsconfig.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Every `.astro` or `.md` file in `src/pages/` becomes a route automatically. Posts live in the content collection at `src/content/blog/`, and their frontmatter is validated by a schema in `src/content.config.ts`. See the [Content Collections docs](https://docs.astro.build/en/guides/content-collections/).
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## ✍️ Writing a New Post
 
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
+1. Create a file in `src/content/blog/`, e.g. `my-post.md`
+2. Fill in the frontmatter:
 
-Any static assets, like images, can be placed in the `public/` directory.
+   ```md
+   ---
+   title: "Post title"
+   description: "Short description for previews and SEO"
+   pubDate: 2026-11-22
+   heroImage: "../../assets/my-image.jpg"
+   ---
+   ```
+
+3. Write the post, check it locally with `npm run dev`, then commit.
+
+### 📎 Adding Files to Posts (PDFs, configs, etc.)
+
+Downloadable files such as PDFs, config files or archives go into `public/files/`. Everything in `public/` is served as-is from the site root, so `public/files/example.pdf` is available at `/files/example.pdf`.
+
+Link to a file in a post with an absolute path starting with `/files/`:
+
+```md
+[Download the PDF](/files/example.pdf)
+[My sway config](/files/sway-config)
+```
+
+Notes:
+
+- Do **not** include `public` in the link: use `/files/...`, not `/public/files/...`.
+- Use lowercase file names without spaces (e.g. `my-config.conf`) to avoid broken links.
+- Images that should be optimized by Astro belong in `src/assets/` instead.
+- To force a download instead of opening the file in the browser (in `.mdx` or raw HTML), use `<a href="/files/example.pdf" download>Download</a>`.
+3. Write the post, check it locally with `npm run dev`, then commit.
 
 ## 🧞 Commands
 
-All commands are run from the root of the project, from a terminal:
+All commands are run from the root of the project:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+| Command                   | Action                                            |
+| :------------------------ | :------------------------------------------------ |
+| `npm install`             | Installs dependencies                             |
+| `npm run dev`             | Starts local dev server at `localhost:4321`       |
+| `npm run build`           | Builds the production site to `./dist/`           |
+| `npm run preview`         | Previews the build locally before deploying       |
+| `npm run astro ...`       | Runs CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Shows help for the Astro CLI                      |
 
-## 👀 Want to learn more?
+## 📄 License & Credits
 
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
-## Credit
-
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+- Content: © joekamprad ([joelicense 1.0 (2021)](https://kamprad.net/privacy/))
+- Built with [Astro](https://astro.build/)
+- Theme based on the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/)
