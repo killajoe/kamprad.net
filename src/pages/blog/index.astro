@@ -1,10 +1,13 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import '../../styles/global.css';
 
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
+
+const [latest, ...older] = posts;
+const Content = latest ? (await render(latest)).Content : null;
 ---
 
 <!DOCTYPE html>
@@ -25,16 +28,34 @@ const posts = (await getCollection('blog')).sort(
 		<div class="prompt"><span>joe@kamprad.net</span>:~/blog$ ls -lt ./posts/</div>
 		<h1><em>#blog</em></h1>
 
-		<ul class="post-list">
-			{posts.map((post) => (
-				<li>
-					<time datetime={post.data.pubDate.toISOString()}>
-						{post.data.pubDate.toISOString().slice(0, 10)}
-					</time>
-					<a href={`/blog/${post.id}/`}>{post.data.title}</a>
-				</li>
-			))}
-		</ul>
+		{latest && Content && (
+			<article class="latest">
+				<div class="prompt"><span>joe@kamprad.net</span>:~/blog$ cat ./posts/latest</div>
+				<h2><a href={`/blog/${latest.id}/`}>{latest.data.title}</a></h2>
+				<time datetime={latest.data.pubDate.toISOString()}>
+					{latest.data.pubDate.toISOString().slice(0, 10)}
+				</time>
+				<div class="latest-content">
+					<Content />
+				</div>
+			</article>
+		)}
+
+		{older.length > 0 && (
+			<>
+				<div class="prompt"><span>joe@kamprad.net</span>:~/blog$ ls ./posts/older/</div>
+				<ul class="post-list">
+					{older.map((post) => (
+						<li>
+							<time datetime={post.data.pubDate.toISOString()}>
+								{post.data.pubDate.toISOString().slice(0, 10)}
+							</time>
+							<a href={`/blog/${post.id}/`}>{post.data.title}</a>
+						</li>
+					))}
+				</ul>
+			</>
+		)}
 
 		<footer>// {posts.length} entries found.</footer>
 	</main>
@@ -53,6 +74,23 @@ const posts = (await getCollection('blog')).sort(
 		h1 em {
 			color: var(--accent);
 			font-style: normal;
+		}
+		.latest {
+			margin-bottom: 3rem;
+			padding-bottom: 2rem;
+			border-bottom: 1px dashed var(--border);
+		}
+		.latest h2 {
+			margin: 0.5rem 0 0.25rem 0;
+		}
+		.latest-content {
+			margin-top: 1.25rem;
+		}
+		/* Inhalte aus <Content /> bekommen kein Scoping, daher :global */
+		.latest-content :global(img),
+		.latest-content :global(iframe),
+		.latest-content :global(video) {
+			max-width: 100%;
 		}
 		.post-list {
 			list-style: none;
