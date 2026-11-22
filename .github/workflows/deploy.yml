@@ -23,7 +23,7 @@ jobs:
       - run: npm ci
       - run: npm run build
 
-      - name: SSH vorbereiten
+      - name: Prepare SSH
         env:
           DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
           KNOWN_HOSTS: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
@@ -33,21 +33,21 @@ jobs:
           chmod 600 ~/.ssh/id_ed25519
           printf '%s\n' "$KNOWN_HOSTS" > ~/.ssh/known_hosts
 
-      - name: Deployen (tar über SSH, mit Bereinigung)
+      - name: Deploy via tar over SSH (with cleanup)
         env:
           HOST: ${{ secrets.DEPLOY_HOST }}
           USER: ${{ secrets.DEPLOY_USER }}
           TARGET: ${{ secrets.DEPLOY_PATH }}
         run: |
-          # Sicherheitschecks
+          # Safety checks
           test -n "$TARGET"
           test -f dist/index.html
 
-          # 1. Neuen Build in Staging hochladen (Live-Seite bleibt unberührt)
+          # 1. Upload new build to staging (live site stays untouched)
           tar -czf - -C dist . | ssh "$USER@$HOST" \
             "rm -rf '$TARGET.staging' && mkdir -p '$TARGET.staging' && tar -xzf - -C '$TARGET.staging'"
 
-          # 2. Altes Webroot leeren, Staging einspielen, Staging löschen
+          # 2. Clear old webroot, copy staging in, remove staging
           ssh "$USER@$HOST" "set -e
             mkdir -p '$TARGET'
             find '$TARGET' -mindepth 1 -maxdepth 1 ! -name .well-known ! -name cgi-bin -exec rm -rf {} +
