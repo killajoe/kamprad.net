@@ -1,6 +1,7 @@
 ---
 title: "#Geplante_Obsoleszenz"
 date: 2023-05-29
+heroImage: "./images/geplante_obsoleszenz.jpg"
 ---
 
 **Geplante Obsoleszenz, geplanter Verschleiß**, **Produktvergreisung,**  ist eine [Marketingstrategie](https://de.wikipedia.org/wiki/Marketingstrategie "Marketingstrategie"), bei der das Veralten eines Produktes ([Obsoleszenz](https://de.wikipedia.org/wiki/Obsoleszenz "Obsoleszenz")) vom Hersteller geplant und konzeptionell vorgesehen ist.
