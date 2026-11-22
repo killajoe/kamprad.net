@@ -35,7 +35,7 @@ const Content = latest ? (await render(latest)).Content : null;
 				<time datetime={latest.data.pubDate.toISOString()}>
 					{latest.data.pubDate.toISOString().slice(0, 10)}
 				</time>
-				<div class="latest-content">
+				<div class="latest-content prose">
 					<Content />
 				</div>
 			</article>
