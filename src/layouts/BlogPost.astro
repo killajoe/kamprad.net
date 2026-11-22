@@ -144,5 +144,17 @@ const { title, description, pubDate, updatedDate, heroImage, categories, tags, n
 			text-align: right;
 		}
 	</style>
+    <style is:global>
+        :root {
+            --img-default-width: 320px;
+        }
+
+        article img:not(.active-image) {
+            width: var(--img-default-width);
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+        }
+</style>
 </body>
 </html>
