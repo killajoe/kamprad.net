@@ -46,16 +46,16 @@ Dies führt dazu, dass die Klinge am Halter herum flog.. weiteres Benutzen hätt
 
 Schickte die defekten Teile zum Austausch ein und erhielt Erstazteile eine Woche danach mit der Paketpost.... nach der nächsten Verwendung zur Zubereitung eines Teigs ... mit Eiern und Mehl !!
 
-genau das Gleiche,  es schredderte die Noppen weg.. und die Teigklinge zappele im Gerät herum..  
+genau das Gleiche,  es schredderte die Noppen weg.. und die Teigklinge zappele im Gerät herum..
 Schickte jetzt die komplette Maschine zurück und schrieb dass sie diese dort selbst entsorgen können.
 
 Mal sehen, ob ich das Geld zurückbekomme oder zumindest einen Gutschein?
 
 Abgesehen von diesem offensichtlichen Design/Produktions/Obsolesenz   Problem, ist das Gerät auch sonst in keiner Weise dazu geeignet länger genutzt zu werden, Griffe haben Öffnungen in die Schmutz ein dringen kann und es tut, vor allem wenn du diese in der Spülmachine wäschst (explizit dafür geeignet laut Hersteller). Gefäße sind kompülett aus transparentem Plastik so das du zusehen kannst wie es in den Griffen schimmelt... apropos.. ein weitere Fehlkauf von bosch ist der [ErgoMixx](https://www.bosch-home.com/de/produktliste/kuechengeraete/stabmixer/ergomixx-stabmixer/MSM66120#/Togglebox=accessories/Togglebox=manuals/Togglebox=accessoriesOthers/):
 
-![](images/photo_2023-05-29_11-07-19-225x300.jpg)
+![](images/photo_2023-05-29_11-07-19.jpg)
 
-![](images/photo_2023-05-29_11-07-19-5-225x300.jpg)
+![](images/photo_2023-05-29_11-07-19-5.jpg)
 
 Ansich ein kompaktes starkes robustes Gerät mit Stabmixer und Zerkleinerer.
 
@@ -73,7 +73,7 @@ Läuft ebenfalls seit 2 Jahren problemlos mit der Modifikation.
 
 So .. Bosch ignoriert das ich das Gerät wegen eines Produktionsfehlers zurück gegeben habe.. und sendet mir aus "Kulanz" ein komplettes Neugerät... Sehe nicht eindeutig ob es das Selbe Modell ist...
 
-![](images/2023-05-31_09-08-213x300.png)
+![](images/2023-05-31_09-08.png)
 
 Wir werden sehen.. ich meine okay..  könnte das jetzt einfach bei Bucht verkaufen.. aber da bekomme ich nicht mal 50€ dafür  ...
 
@@ -89,13 +89,13 @@ Also ohne das sich derjenige dessen Nachbesserung nicht erfolgreich war diesen Z
 
 **Edit 15.6.2023 (Nur nach meiner Nachfrage zu dem Gerät per Email):**
 
-![](images/2023-06-16_18-41-230x300.png)
+![](images/2023-06-16_18-41.png)
 
 Also wird von der Seite des Bosch Kundenservice einfach ignoriert.. Fehlgeschlagene Nachbesserung? Produktionsfehler?  so was gibt es nicht.. und wird einfach gesagt das müssen wir nicht das kann nur der Verkäufer..
 
 Also.. neues Ziel Rückerstattung beim Verkäufer.. habe am selben Tag angefragt und bisher nur eine Antwort das mein Anliegen and die entsprechende Stelle weiter geleitet wird.
 
-![](images/2023-06-16_18-46-300x214.png)
+![](images/2023-06-16_18-46.png)
 
 **EDIT 20.06.2023:**
 
@@ -109,7 +109,7 @@ Vorsichtshalber habe ich gleich eine Anzeige beim Verbraucherschutz angelegt.
 
 Hmm.. interessant:
 
-![](images/2023-06-20_12-47-300x119.png)
+![](images/2023-06-20_12-47.png)
 
 Dann sehen wir mal was der Bosch Service trotz dem antwortet.. oder ob die sich abgestimmt haben?
 
@@ -149,11 +149,11 @@ September 2023 musste ich die Kabel erneut flicken da selbst die Verstärkten du
 
 Einraste Halterung ist wieder abgebrochen und läßt sich nicht mehr ankleben.. geht noch wenn ich von Hand fest drücke..
 
-![](images/photo_2023-05-29_11-07-19-2-225x300.jpg)
+![](images/photo_2023-05-29_11-07-19-2.jpg)
 
-![](images/photo_2023-05-29_11-07-19-3-225x300.jpg)
+![](images/photo_2023-05-29_11-07-19-3.jpg)
 
-![](images/photo_2023-05-29_11-07-19-4-300x225.jpg)
+![](images/photo_2023-05-29_11-07-19-4.jpg)
 
 4\. Logitech
 
@@ -161,7 +161,7 @@ Ja genau ein Garant für Langlebigkeit Qualität un Präzesion..
 
 [MX Keys Tastatur](https://www.logitech.com/de-de/products/keyboards/mx-keys-wireless-keyboard.html)
 
-![](images/IMG_20220716_143821700_HDR-225x300.jpg)
+![](images/IMG_20220716_143821700_HDR.jpg)
 
 Das 2. Austausch Gerät..
 
@@ -175,7 +175,7 @@ Seit dem funktioniert die Tastatur ( 1.12.2023), der Akku ist aber bereits sehr 
 
 Irgendwann mitte 2025 habe ich dann die Nase vol gehabt weil das Teil Schäbig aussah und ständig der Akku leer....
 
-![](images/shitmxkeys-934x1024.jpg)
+![](images/shitmxkeys.jpg)
 
 **Ähnliche Funde:**
 
