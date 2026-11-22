@@ -1,63 +1,297 @@
 ---
-import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
-import Layout from '../layouts/BlogPost.astro';
+// src/pages/about.astro
+import "../styles/global.css";
+
+const title = "About me – joekamprad";
+const description =
+  "joekamprad – co-founder of EndeavourOS, janitor of the ISO, installer tinkerer and sway fan.";
+const image = "/images/joegta6_big.png";
+
+const links = [
+  { label: "GitHub", href: "https://github.com/killajoe" },
+  { label: "Telegram", href: "https://t.me/joekamprad" },
+  { label: "Mastodon", href: "https://mastodon.social/@joekamprad" },
+  { label: "EndeavourOS forum", href: "https://forum.endeavouros.com/u/joekamprad" },
+  { label: "Open Collective", href: "https://opencollective.com/johannes-kamprad" },
+];
 ---
 
-<Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
-	heroImage={AboutHeroImage}
->
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-	</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>{title}</title>
+	<meta name="description" content={description} />
+	<meta property="og:title" content={title} />
+	<meta property="og:description" content={description} />
+	<meta property="og:image" content={image} />
+</head>
+<body>
+	<main class="about">
+		<p class="prompt"><span>joe@kamprad</span>:~$ cat about.md</p>
 
-	<p>
-		Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non
-		tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non
-		blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna
-		porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-		massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-		Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis
-		bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra
-		massa massa ultricies mi.
-	</p>
+		<div class="grid">
+			<div class="col side">
+			<!-- Portrait -->
+			<section class="tile portrait focused" aria-label="Portrait">
+				<img src={image} alt="joekamprad, GTA style" width="540" height="740" loading="eager" />
+				<p class="bar">joe@kamprad</p>
+			</section>
 
-	<p>
-		Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl
-		suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet
-		nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae
-		turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-		dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat
-		semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-		vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-		facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam
-		vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla
-		urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
-	</p>
+			<!-- Terminal -->
+			<section class="tile term" aria-label="Short profile">
+				<pre><code><span class="p">$</span> whoami
+joekamprad [Der Doktor]
 
-	<p>
-		Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper
-		viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc
-		scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur
-		gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-		pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-		blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id
-		cursus metus aliquam eleifend mi.
-	</p>
+<span class="p">$</span> cat /etc/joekamprad/role
+iso, installer, desktop-setups
 
-	<p>
-		Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta
-		nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam
-		tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci
-		ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar
-		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
-	</p>
-</Layout>
+<span class="p">$</span> echo $WM
+sway  <span class="dim"># formerly: i3wm</span>
+
+<span class="p">$</span> pacman -Qi endeavouros | grep founder
+<span class="ok">yes.</span>
+
+<span class="p">$</span> dd if=/dev/espresso of=/dev/joe
+<span class="ok">40 ml copied, 28 s, 1.4 ml/s</span>
+
+<span class="p">$</span> ./cook.sh --spicy
+<span class="ok">warning: this may break your keyboard.</span></code></pre>
+			</section>
+			</div>
+
+			<div class="col content">
+			<!-- Who -->
+			<section class="tile intro" aria-labelledby="who">
+				<h1 id="who">joekamprad,<br />a.k.a. Der Doktor.</h1>
+				<p class="lead">
+					In the community they call me “Der Doktor”. On paper I’m one of the founders of
+					EndeavourOS. In practice I prefer to call myself the janitor: the distribution is
+					largely built around its users, and someone has to keep the lights on, fix the doors and
+					check that everything in the basement is still running.
+				</p>
+				<p>
+					I’m a chef nerd addicted to getting things done. Whatever repeats itself becomes a
+					script. Whatever can be explained becomes a tutorial.
+				</p>
+			</section>
+
+			<!-- EndeavourOS and tech -->
+			<section class="tile work" aria-labelledby="workbench">
+				<h2 id="workbench">EndeavourOS &amp; technology</h2>
+				<p>
+					I’m one of the founders of EndeavourOS. I build and maintain the ISO and the live
+					environment, design the Calamares installer and fix its bugs, look after how the Nvidia
+					drivers are handled on the ISO, and put together the preconfigured desktop setups. My
+					favorite is the sway setup, formerly i3. Besides that, this is what you will find on this site:
+				</p>
+				<dl>
+					<dt>DIY projects</dt>
+					<dd>
+						Things I build, fix and tune myself, from calibrating displays on Linux to getting a
+						lever espresso machine just right.
+					</dd>
+					<dt>Thoughts</dt>
+					<dd>
+						Posts where I stop and think: about technology and where it leads us, about trust and
+						scale in open source communities, and about the state of the world.
+					</dd>
+					<dt>Information</dt>
+					<dd>
+						Explainers, FAQs and warnings from daily Linux life: what works, what doesn’t, which
+						tools to avoid and why, and how to survive the terminal.
+					</dd>
+				</dl>
+				<p class="all"><a href="/blog/">Browse all posts</a></p>
+			</section>
+			</div>
+
+			<!-- What is all this -->
+			<section class="tile story" aria-labelledby="story">
+				<h2 id="story">What is all this?</h2>
+				<p>
+					On this blog I show the things I find on the web and share my opinion on current
+					political events, plus everything that has to do with tech, Linux, computers and
+					cooking.
+				</p>
+				<p>
+					The person writing it is a nerd, a cook, a typographer and a printer, a community
+					architect and a mentor, a philosopher and writer. All of them get a say here,
+					which is why a post about a kernel parameter can sit next to one about a good soup,
+					or a thought on how we live together.
+				</p>
+				<p>
+					You are welcome to disagree, and to share whatever is useful to you.
+				</p>
+			</section>
+
+			<!-- Typewriter -->
+			<section class="tile paper" aria-labelledby="typework">
+				<h2 id="typework">#typework</h2>
+				<p>
+					My site has room for things that don’t fit into a package manager: an Olympia
+					typewriter, a La Pavoni espresso machine from 1976, thoughts on net neutrality, on
+					consumption and on how ten billion people will get enough to eat.
+				</p>
+				<p>
+					I believe that an open net and open software belong together. Both live on the fact
+					that many people are allowed to join in.
+				</p>
+				<p class="sig"><a href="https://kamprad.net/blog/hallo-welt/">– joekamprad, Planet Earth</a></p>
+			</section>
+
+			<!-- Links (bottom of the page, full width) -->
+			<section class="tile links" aria-labelledby="find">
+				<h2 id="find">Find me here</h2>
+				<ul>
+					{links.map((l) => (
+						<li><a href={l.href} rel="noopener">{l.label}</a></li>
+					))}
+				</ul>
+			</section>
+
+		</div>
+	</main>
+
+	<footer class="footer">
+		<div class="beer">
+			<script
+				is:inline
+				type="text/javascript"
+				src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js"
+				data-name="bmc-button"
+				data-slug="joekamprad"
+				data-color="#110a21"
+				data-emoji="🍺"
+				data-font="Bree"
+				data-text="Buy me a beer"
+				data-outline-color="#000000"
+				data-font-color="#ffffff"
+				data-coffee-color="#FFDD00"
+			></script>
+		</div>
+		<nav class="footer-links" aria-label="Footer">
+			<a href="/">← cd ~</a>
+			<a href="/privacy/">Privacy</a>
+		</nav>
+	</footer>
+</body>
+</html>
+
+<style>
+	/* Uses the variables from global.css; only overrides the narrow main width. */
+	.about {
+		max-width: 68rem;
+	}
+
+	.grid {
+		display: grid;
+		gap: 0.75rem;
+		grid-template-columns: repeat(12, 1fr);
+		align-items: start;
+	}
+	/* left column: portrait and terminal stacked; right column: intro and workbench */
+	.col { display: flex; flex-direction: column; gap: 0.75rem; min-width: 0; }
+	.side { grid-column: span 4; }
+	.content { grid-column: span 8; }
+	.story { grid-column: span 6; align-self: stretch; }
+	.paper { grid-column: span 6; }
+	.links { grid-column: 1 / -1; }
+
+	.tile {
+		background: var(--bg-elevated);
+		border: 1px solid var(--border);
+		border-radius: 4px;
+		padding: 1.25rem 1.4rem;
+		min-width: 0;
+	}
+	/* focused tile, like the focus border in sway */
+	.tile.focused { border: 2px solid var(--accent); }
+
+	h1, h2 { line-height: 1.25; margin: 0 0 1rem; }
+	h1 { font-size: clamp(1.5rem, 3vw, 2.1rem); letter-spacing: -0.02em; }
+	h2 { font-size: 1.05rem; }
+	h2::before { content: "## "; color: var(--accent); }
+	.paper h2::before { content: ""; }
+	p { margin: 0 0 1rem; }
+	p:last-child { margin-bottom: 0; }
+	.lead { font-size: 1.02rem; }
+
+	/* portrait keeps the image's own proportions (width/height attributes set the ratio) */
+	.portrait { padding: 0; overflow: hidden; }
+	.portrait img { display: block; width: 100%; height: auto; }
+	.bar {
+		margin: 0;
+		padding: 0.5rem 1rem;
+		font-size: 0.82rem;
+		color: var(--dim);
+		border-top: 2px solid var(--accent);
+	}
+
+	.term { display: flex; flex-direction: column; justify-content: center; }
+	.term pre { margin: 0; overflow-x: auto; font: inherit; font-size: 0.8rem; line-height: 1.7; }
+	.term code { font: inherit; }
+	.p { color: var(--accent); }
+	.dim { color: var(--dim); }
+	.ok { color: var(--accent); }
+
+	dl { margin: 0; }
+	dt { font-weight: 700; margin-top: 1rem; }
+	dt:first-child { margin-top: 0; }
+	dd { margin: 0.2rem 0 0; color: var(--dim); }
+	.all { margin-top: 1.25rem; }
+
+	/* Typewriter sheet: the one outlier on the page */
+	.paper {
+		background: #f1ede1;
+		color: #26231d;
+		border-color: #f1ede1;
+		font-family: "Courier Prime", "Courier New", Courier, monospace;
+		transform: rotate(-0.2deg);
+	}
+	.paper { display: flex; flex-direction: column; justify-content: center; }
+	.paper .sig { margin-top: 1.5rem; text-align: right; }
+	.paper a { color: #4b3fb0; }
+	.paper a:hover, .paper a:focus-visible { border-bottom-color: #4b3fb0; }
+
+	.footer {
+		max-width: 68rem;
+		margin: 2rem auto 0;
+		padding-top: 1rem;
+		border-top: 1px solid var(--border);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 1rem;
+		font-size: 0.9rem;
+		color: var(--dim);
+	}
+	/* home and privacy: bottom right */
+	.footer-links { display: flex; gap: 0.5rem 1.5rem; margin-left: auto; text-align: right; }
+
+	.links ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; }
+
+	@media (min-width: 861px) {
+		.term, .paper { aspect-ratio: 1 / 1; }
+	}
+
+	@media (max-width: 860px) {
+		.grid { grid-template-columns: 1fr; }
+		.col { display: contents; }
+		.side, .content, .story, .paper, .links { grid-column: auto; }
+		.intro { order: 1; }
+		.portrait { order: 2; }
+		.term { order: 3; }
+		.work { order: 4; }
+		.story { order: 5; }
+		.paper { order: 6; transform: none; }
+		.links { order: 7; }
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		.paper { transition: transform 0.2s ease; }
+		.paper:hover { transform: rotate(0deg); }
+	}
+</style>

@@ -1,0 +1,16 @@
+DirectoryIndex index.htm index.html
+
+RewriteEngine On
+
+# Redirect www to non-www and enforce HTTPS
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\.kamprad\.net$ [NC]
+RewriteRule ^ https://kamprad.net%{REQUEST_URI} [L,R=301]
+
+# Redirect old root-level post slugs to /blog/<slug>/ if not an existing file or directory
+RewriteCond %{REQUEST_URI} !^/blog(/|$)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)/?$ /blog/$1/ [L,R=301]
+
+ErrorDocument 404 /404.html

@@ -3,11 +3,15 @@
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import { defineConfig, fontProviders } from 'astro/config';
+import { remarkYouTube } from './src/plugins/remark-youtube.mjs';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://example.com',
+	site: 'https://kamprad.net',
 	integrations: [mdx(), sitemap()],
+	markdown: {
+		remarkPlugins: [remarkYouTube],
+	},
 	fonts: [
 		{
 			provider: fontProviders.local(),

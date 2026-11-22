@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Devices Overview</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f6f8fa;
+    margin: 20px;
+  }
+  h1, h2, h3, h4, h5 {
+    color: #333;
+  }
+  .card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .label {
+    display: inline-block;
+    background-color: #cccccc;
+    color: #006fb8;
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+  }
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  ul li {
+    margin: 6px 0;
+    padding-left: 10px;
+    position: relative;
+  }
+  ul li::before {
+    content: "•";
+    color: #006fb8;
+    position: absolute;
+    left: 0;
+  }
+</style>
+</head>
+<body>
+
+<h1>Devices</h1>
+
+<div class="card">
+  <h2>Memory Devices</h2>
+  <ul>
+    <li><strong>Mainboard:</strong> 32 / 64 GiB DDR5 SDRAM</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3>Memory Array</h3>
+  <ul>
+    <li><strong>DMI Handle:</strong> 0x11</li>
+    <li><strong>Locator:</strong> Mainboard</li>
+    <li><strong>Use:</strong> System Memory</li>
+    <li><strong>Error Correction Type:</strong> None</li>
+    <li><strong>Size (Present / Max):</strong> 32 / 64 GiB</li>
+    <li><strong>Devices (Populated / Sockets):</strong> 2 / 2</li>
+    <li><strong>Types Present:</strong> DDR5 SDRAM</li>
+    <li><strong>ROM Size:</strong> 0 MiB</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3>Mainboard ➤ P0 CHANNEL A ➤ DIMM 0</h3>
+  <div class="label">Micron</div> 16384 MiB CT16G56C46S5.M8G1
+
+  <h4>Memory Socket</h4>
+  <ul>
+    <li><strong>DMI Handles (Array, Socket):</strong> 0x11, 0x12</li>
+    <li><strong>Locator:</strong> Mainboard ➤ P0 CHANNEL A ➤ DIMM 0</li>
+    <li><strong>Bank Locator:</strong> P0 CHANNEL A</li>
+    <li><strong>Form Factor:</strong> SODIMM</li>
+    <li><strong>Type:</strong> DDR5 / DDR5-5602 (PC5-44800)</li>
+    <li><strong>Manufacturer:</strong> Micron Technology [002c]</li>
+    <li><strong>Part Number:</strong> CT16G56C46S5.M8G1</li>
+    <li><strong>Size:</strong> 16384 MiB</li>
+    <li><strong>Nominal Speed:</strong> 5600 MT/s</li>
+    <li><strong>Configured Speed:</strong> 5600 MT/s</li>
+    <li><strong>Data Width / Total Width:</strong> 64 bits / 64 bits</li>
+    <li><strong>Rank:</strong> 1</li>
+    <li><strong>Minimum Voltage:</strong> 1.1 V</li>
+    <li><strong>Maximum Voltage:</strong> 1.1 V</li>
+    <li><strong>Configured Voltage:</strong> 1.1 V</li>
+  </ul>
+
+  <h4>Serial Presence Detect (SPD) - DDR5 SDRAM</h4>
+  <ul>
+    <li><strong>Source:</strong> 20-0050 (spd5118)</li>
+    <li><strong>SPD Revision:</strong> 1.0</li>
+    <li><strong>Form Factor:</strong> SODIMM (Small Outline Unbuffered DIMM)</li>
+    <li><strong>Type:</strong> DDR5-5602 (PC5-44800)</li>
+    <li><strong>Module Manufacturer:</strong> Micron Technology [002c]</li>
+    <li><strong>DRAM Manufacturer:</strong> Micron Technology [002c]</li>
+    <li><strong>Part Number:</strong> CT16G56C46S5.M8G1</li>
+    <li><strong>Serial Number:</strong> 0xeb1eb233</li>
+    <li><strong>Size:</strong> 32 GiB</li>
+    <li><strong>Manufacturing Date (Year / Week):</strong> 2025 / Week 3</li>
+    <li><strong>Voltage:</strong> 1.1 V</li>
+  </ul>
+
+  <h5>JEDEC Timings</h5>
+  <ul>
+    <li>DDR5-5602: 45-45-45-1</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3>Mainboard ➤ P0 CHANNEL B ➤ DIMM 0</h3>
+  <div class="label">Micron</div> 16384 MiB CT16G56C46S5.M8G1
+
+  <h4>Memory Socket</h4>
+  <ul>
+    <li><strong>DMI Handles (Array, Socket):</strong> 0x11, 0x13</li>
+    <li><strong>Locator:</strong> Mainboard ➤ P0 CHANNEL B ➤ DIMM 0</li>
+    <li><strong>Bank Locator:</strong> P0 CHANNEL B</li>
+    <li><strong>Form Factor:</strong> SODIMM</li>
+    <li><strong>Type:</strong> DDR5 / DDR5-5602 (PC5-44800)</li>
+    <li><strong>Manufacturer:</strong> Micron Technology [002c]</li>
+    <li><strong>Part Number:</strong> CT16G56C46S5.M8G1</li>
+    <li><strong>Size:</strong> 16384 MiB</li>
+    <li><strong>Nominal Speed:</strong> 5600 MT/s</li>
+    <li><strong>Configured Speed:</strong> 5600 MT/s</li>
+    <li><strong>Data Width / Total Width:</strong> 64 bits / 64 bits</li>
+    <li><strong>Rank:</strong> 1</li>
+    <li><strong>Minimum Voltage:</strong> 1.1 V</li>
+    <li><strong>Maximum Voltage:</strong> 1.1 V</li>
+    <li><strong>Configured Voltage:</strong> 1.1 V</li>
+  </ul>
+
+  <h4>Serial Presence Detect (SPD) - DDR5 SDRAM</h4>
+  <ul>
+    <li><strong>Source:</strong> 20-0051 (spd5118)</li>
+    <li><strong>SPD Revision:</strong> 1.0</li>
+    <li><strong>Form Factor:</strong> SODIMM (Small Outline Unbuffered DIMM)</li>
+    <li><strong>Type:</strong> DDR5-5602 (PC5-44800)</li>
+    <li><strong>Module Manufacturer:</strong> Micron Technology [002c]</li>
+    <li><strong>DRAM Manufacturer:</strong> Micron Technology [002c]</li>
+    <li><strong>Part Number:</strong> CT16G56C46S5.M8G1</li>
+    <li><strong>Serial Number:</strong> 0xeb1eb188</li>
+    <li><strong>Size:</strong> 32 GiB</li>
+    <li><strong>Manufacturing Date (Year / Week):</strong> 2025 / Week 3</li>
+    <li><strong>Voltage:</strong> 1.1 V</li>
+  </ul>
+
+  <h5>JEDEC Timings</h5>
+  <ul>
+    <li>DDR5-5602: 45-45-45-1</li>
+  </ul>
+</div>
+
+</body>
+</html>
+

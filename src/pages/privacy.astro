@@ -1,0 +1,64 @@
+---
+// src/pages/privacy.astro
+import "../styles/global.css";
+
+const title = "Data protection and rights – joekamprad";
+const description = "Licence and data protection information for kamprad.net.";
+const date = new Date("2019-06-04");
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>{title}</title>
+	<meta name="description" content={description} />
+</head>
+<body>
+	<main>
+		<p class="prompt"><span>joe@kamprad</span>:~$ cat privacy.md</p>
+
+		<article class="prose">
+			<h1>#data protection and rights:</h1>
+			<p class="date">
+				<time datetime={date.toISOString()}>{date.toISOString().slice(0, 10)}</time>
+			</p>
+
+			<h2>Licence</h2>
+			<p>
+				I cannot make a legally binding statement about the property, but I still think that a
+				manifestation of myself exists and was or will be to a large extent involved in the
+				creation of the texts and images that can be found on this website.
+			</p>
+			<p>
+				If there is a problem just contact me, otherwise leave me alone with your pedantry.
+			</p>
+			<p><strong>joelicense 1.0 (2021)</strong></p>
+
+			<h2>Data protection</h2>
+			<p>
+				I cannot make a definite statement about the possibilities of using data that is actively
+				or passively entered on this website, but I try to keep the website and the software used
+				up to date and to monitor security implementations to the best of my knowledge and belief.
+			</p>
+			<p>
+				However, there are no guarantees as to whether third parties can or have access to this
+				data. The internet is a dangerous place and full of backdoors, shadows, and shallows.
+			</p>
+			<p>But also a wonderful place full of freedom and communication!</p>
+			<p>If you need my public key:</p>
+			<p>
+				<a href="https://www.endeavour.kamprad.net/keys/joekamprad@endeavouros.com.gpg" rel="noopener">joekamprad@endeavouros.com.gpg</a>
+			</p>
+		</article>
+
+		<p class="back"><a href="/">← cd ~</a></p>
+	</main>
+</body>
+</html>
+
+<style>
+	.date { color: var(--dim); font-size: 0.9rem; margin-top: -0.25rem; }
+	.back { margin-top: 3rem; }
+</style>
