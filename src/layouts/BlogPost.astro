@@ -150,8 +150,8 @@ const { title, description, pubDate, updatedDate, heroImage, categories, tags, n
         }
 
         article img:not(.active-image) {
-            width: var(--img-default-width);
-            max-width: 100%;
+            width: auto;
+            max-width: min(var(--img-default-width), 100%);
             height: auto;
             border-radius: 6px;
         }
