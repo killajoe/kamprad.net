@@ -28,18 +28,23 @@ const Content = latest ? (await render(latest)).Content : null;
 		<div class="prompt"><span>joe@kamprad.net</span>:~/blog$ ls -lt ./posts/</div>
 		<h1><em>#blog</em></h1>
 
-		{latest && Content && (
-			<article class="latest">
-				<div class="prompt"><span>joe@kamprad.net</span>:~/blog$ cat ./posts/latest</div>
-				<h2><a href={`/blog/${latest.id}/`}>{latest.data.title}</a></h2>
-				<time datetime={latest.data.pubDate.toISOString()}>
-					{latest.data.pubDate.toISOString().slice(0, 10)}
-				</time>
-				<div class="latest-content prose">
-					<Content />
-				</div>
-			</article>
+{latest && Content && (
+	<article class="latest">
+		<div class="prompt"><span>joe@kamprad.net</span>:~/blog$ cat ./posts/latest</div>
+		<h2><a href={`/blog/${latest.id}/`}>{latest.data.title}</a></h2>
+		<time datetime={latest.data.pubDate.toISOString()}>
+			{latest.data.pubDate.toISOString().slice(0, 10)}
+		</time>
+		{latest.data.heroImage && (
+			typeof latest.data.heroImage === 'string'
+				? <img class="hero" src={latest.data.heroImage} alt="" />
+				: <Image class="hero" src={latest.data.heroImage} alt="" />
 		)}
+		<div class="latest-content prose">
+			<Content />
+		</div>
+	</article>
+)}
 
 		{older.length > 0 && (
 			<>
