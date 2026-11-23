@@ -3,6 +3,7 @@ title: "#covid19"
 date: 2020-03-28
 categories: 
   - "allgemein"
+heroImage: "./images/covid19.jpg"
 ---
 
 ## **Everyone now knows how to wash their hands!**
