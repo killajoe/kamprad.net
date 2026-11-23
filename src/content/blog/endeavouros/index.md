@@ -99,8 +99,39 @@ A lot of users know what they are doing on EndeavourOS and it would annoy these 
 
 Personal i like the Portal idea, lets see if it will happen.. I start with adding a scriptlet to .bashrc this is easy to remove in case you do not want it.
 
-```
-## ~/.bashrc## If not running interactively, don't do anything[[ $- != *i* ]] && returnalias ls='ls --color=auto'alias grep='grep --color=auto'PS1="[\[\e[35m\]\u\[\e[m\]\[\e[31m\]@\[\e[m\]\[\e[34m\]\h\[\e[m\]]\\$\[\e[33m\]\w\[\e[m\]\[\e[36m\]:\[\e[m\] "#PS1='[\u@\h \W]\$ 'bind '"\e[A":history-search-backward' # history with arrow up keybind '"\e[B":history-search-forward' # history with arrow down keyexport PATH=$PATH:~/.local/binyay() {    # Red, bold "WARNING" heading    echo -e "\e[1;31m\e[1mWARNING\e[0m" >&2    echo -e "\e[0;33mYou use yay, which allows you to build and install AUR packages.\e[0m" >&2    echo -e "\e[0;33mAUR packages are user-produced content.\e[0m" >&2    echo -e "\e[0;33mThese PKGBUILDs are completely unofficial and have not been thoroughly vetted.\e[0m" >&2    echo -e "\e[0;33mAny use of the provided files is at your own risk.\n\e[0m" >&2    read -rp "Do you want to continue? (y/N): " confirm    if [[ "$confirm" =~ ^[Yy]$ ]]; then        /usr/bin/yay "$@"    else        echo "Aborted."        return 1    fi}
+```bash title="~/.bashrc" frame="terminal"
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+PS1="[\[\e[35m\]\u\[\e[m\]\[\e[31m\]@\[\e[m\]\[\e[34m\]\h\[\e[m\]]\\$\[\e[33m\]\w\[\e[m\]\[\e[36m\]:\[\e[m\] "
+#PS1='[\u@\h \W]\$ '
+
+bind '"\e[A":history-search-backward' # history with arrow up key
+bind '"\e[B":history-search-forward' # history with arrow down key
+
+export PATH=$PATH:~/.local/bin
+
+yay() {
+    # Red, bold "WARNING" heading
+    echo -e "\e[1;31m\e[1mWARNING\e[0m" >&2
+    echo -e "\e[0;33mYou use yay, which allows you to build and install AUR packages.\e[0m" >&2
+    echo -e "\e[0;33mAUR packages are user-produced content.\e[0m" >&2
+    echo -e "\e[0;33mThese PKGBUILDs are completely unofficial and have not been thoroughly vetted.\e[0m" >&2
+    echo -e "\e[0;33mAny use of the provided files is at your own risk.\n\e[0m" >&2
+    read -rp "Do you want to continue? (y/N): " confirm
+    if [[ "$confirm" =~ ^[Yy]$ ]]; then
+        /usr/bin/yay "$@"
+    else
+        echo "Aborted."
+        return 1
+    fi
+}
 ```
 
 ## **#Archlinux a collaborative pirate ship?**
