@@ -8,19 +8,18 @@ date: 2019-09-05
 ![](images/meltiungfirepot.jpg)
 ![](images/havelgutburger-1024x1013.png)
 
-[![](images/clubculture-1-743x1024.png)](https://kamprad.net/wp-content/uploads/2019/09/clubculture-1.png)
+![](images/clubculture-1-743x1024.png)
 
 
 
-[![](images/ucb-743x1024.png)](https://kamprad.net/wp-content/uploads/2019/09/ucb.png)
+![](images/ucb-743x1024.png
+
+
+![](images/kulturrevolution-731x1024.png)
 
 
 
-[![](images/kulturrevolution-731x1024.png)](https://kamprad.net/wp-content/uploads/2019/09/kulturrevolution.png)
-
-
-
-[![](images/der-dachs-743x1024.png)](https://kamprad.net/wp-content/uploads/2019/09/der-dachs.png)
+![](images/der-dachs-743x1024.png)
 
 
 
